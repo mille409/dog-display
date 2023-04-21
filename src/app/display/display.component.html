@@ -1,0 +1,34 @@
+<mat-form-field class="species-select" appearance="fill">
+  <h3>SPECIES</h3>
+  <mat-select panelClass="species-select-dropdown" [formControl]="speciesFormControl">
+    <mat-option *ngFor="let species of species" [value]="species">{{species | uppercase}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<div class="main-div">
+  <mat-card class="card" *ngIf="currentSpecies" (click)="navigateToWikipedia()">
+    <mat-card-header>
+      <img mat-card-avatar [src]=getCurrentImage>
+      <mat-card-title>{{currentSpecies | uppercase}} {{currentIndex+1}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]=getCurrentImage>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="initiatePet(); $event.stopPropagation();">PET</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div class="paginator-wrapper">
+  <mat-paginator #paginator
+               (page)="handlePageEvent($event)"
+               [length]="getImageLength"
+               [pageSize]="1"
+               [showFirstLastButtons]="true"
+               [hidePageSize]="true"
+               [pageIndex]="0"
+               aria-label="Select page">
+  </mat-paginator>
+</div>
+
+
+

@@ -1,0 +1,40 @@
+.species-select {
+  background-color: #DCEBDD;
+  margin: auto;
+  width: 50%;
+  border: 3px solid #AD9A27;
+  padding: 10px;
+  display: block;
+}
+
+::ng-deep .species-select-dropdown {
+  background-color: #A0D5D6;
+  padding: 14px;
+  margin: 10px;
+}
+
+.card {
+  background-color: white;
+  max-width: 400px;
+}
+
+.main-div{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginator-wrapper {
+  position:fixed;
+  bottom:0px;
+  width:100%;
+}
+
+/*
+#AD9A27
+#304345
+#789AA1
+#A0D5D6
+#DCEBDD
+*/
